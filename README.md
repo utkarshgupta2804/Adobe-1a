@@ -83,10 +83,10 @@ For each PDF, a corresponding JSON file is generated in:
 
 ```bash
 sample_dataset/outputs/
-Example output:
 ```
 
-json
+Example output:
+```json
 {
   "title": "Research on YOLOv10",
   "total_pages": 6,
@@ -107,6 +107,8 @@ json
     }
   ]
 }
+```
+
 🧪 Testing PDF-to-Image Conversion
 You can test standalone image conversion using:
 
