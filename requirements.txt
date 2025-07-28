@@ -1,0 +1,12 @@
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.168
+pdf2image>=3.1.0
+PyMuPDF>=1.23.0
+opencv-python>=4.8.0
+matplotlib>=3.7.0
+Pillow>=9.5.0
+numpy>=1.24.0
+easyocr>=1.7.0
+# Alternative OCR option (choose one):
+pytesseract>=0.3.10
