@@ -38,37 +38,29 @@ Install required Python libraries:
 
 ```bash
 pip install -r requirements.txt
+```
 Or manually install:
 
-bash
-Copy
-Edit
+```bash
 pip install ultralytics easyocr pytesseract opencv-python PyMuPDF pillow numpy
-Additional Setup:
-For pytesseract, you must install Tesseract:
-
-Ubuntu: sudo apt install tesseract-ocr
-
-Windows: Download from here
-
-Mac: brew install tesseract
+```
 
 🐳 Docker Usage (Recommended)
 🛠️ Build the Docker Image:
-bash
-Copy
-Edit
+```bash
 docker build --platform=linux/amd64 -t pdf-headings:v1 .
+```
+
 📦 Run the Docker Container:
-bash
-Copy
-Edit
+```bash
 docker run --rm \
   -v "$(pwd)/sample_dataset/pdfs:/app/sample_dataset/pdfs:ro" \
   -v "$(pwd)/sample_dataset/outputs:/app/sample_dataset/outputs" \
   -v "$(pwd)/sample_dataset/images:/app/sample_dataset/images" \
   --network none \
   pdf-headings:v1
+```
+
 🧠 How It Works
 PDF Conversion: Each page of a PDF is converted to an image using PyMuPDF (preferred) or pdf2image.
 
@@ -83,22 +75,18 @@ JSON Output: Outputs a structured JSON file containing the title and outline.
 📥 Input
 Place your PDF files in:
 
-bash
-Copy
-Edit
+```bash
 sample_dataset/pdfs/
 📤 Output
 For each PDF, a corresponding JSON file is generated in:
+```
 
-bash
-Copy
-Edit
+```bash
 sample_dataset/outputs/
 Example output:
+```
 
 json
-Copy
-Edit
 {
   "title": "Research on YOLOv10",
   "total_pages": 6,
@@ -122,9 +110,7 @@ Edit
 🧪 Testing PDF-to-Image Conversion
 You can test standalone image conversion using:
 
-bash
-Copy
-Edit
+```bash
 python process_pdfs.py
 Make sure "file03.pdf" exists in the same directory.
-
+```
